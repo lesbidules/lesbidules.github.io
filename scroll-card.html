@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function transformScroll(event) {
+            if (!event.deltaY) {
+                return;
+            }
+
+            event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
+            event.preventDefault();
+        }
+
+        var element = document.scrollingElement || document.documentElement;
+        element.addEventListener('wheel', transformScroll);
+    </script>
+    <style>
+        .card-container {
+            display: flex;
+            flex-flow: column wrap;
+            height: 100vh;
+            margin: 0 2vw 0 2vw;
+            /* align-items: center; */
+            /* background-color: #888; */
+        }
+
+        .grid-msn {
+            display: grid;
+            grid-template-columns: masonry;
+        }
+
+        .item {
+            width: 20vw;
+            height: 18vh;
+            background-color: #bcbcbc;
+            margin: 1vw;
+            border-radius: 15px;
+        }
+
+        .item:nth-child(3n+1) {
+            height: 28vh;
+        }
+
+        .item:nth-child(3n+1):nth-child(2n + 2) {
+            height: 20vh;
+        }
+
+        .item:nth-child(3n + 2) {
+            height: 18vh;
+        }
+    </style>
+</head>
+
+<body style="overflow-y: hidden;">
+    <!-- <div id="test" style="background-color: green; height: 97vh;width: 120vw"></div> -->
+    <div class="card-container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>
